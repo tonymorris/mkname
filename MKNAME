@@ -1,0 +1,28 @@
+Building add-0.0.1...
+Preprocessing library add-0.0.1...
+[1 of 1] Compiling Add              ( src/Add.hs, dist/build/Add.o )
+In-place registering add-0.0.1...
+Preprocessing test suite 'doctests' for add-0.0.1...
+[2 of 2] Compiling Main             ( test/doctests.hs, dist/build/doctests/doctests-tmp/Main.o )
+Linking dist/build/doctests/doctests ...
+Running 1 test suites...
+Test suite doctests: RUNNING...
+### Failure in src/Add.hs:5: expression `x + 0 == x'
+
+<interactive>:35:19:
+    Not in scope: âmkNameâ
+    In the splice: $(polyQuickCheck (mkName "doctest_prop"))
+
+<interactive>:35:19:
+    GHC stage restriction:
+      âmkNameâ is used in a top-level splice or annotation,
+      and must be imported, not defined locally
+    In the first argument of âpolyQuickCheckâ, namely
+      â(mkName "doctest_prop")â
+    In the expression: polyQuickCheck (mkName "doctest_prop")
+    In the splice: $(polyQuickCheck (mkName "doctest_prop"))
+Examples: 1  Tried: 1  Errors: 0  Failures: 1
+Test suite doctests: FAIL
+Test suite logged to: dist/test/add-0.0.1-doctests.log
+0 of 1 test suites (0 of 1 test cases) passed.
+
